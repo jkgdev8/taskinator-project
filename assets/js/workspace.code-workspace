@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Downloads/4.3"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
