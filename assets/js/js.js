@@ -1,12 +1,9 @@
 var taskIdCounter = 0;
-
 var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 var tasksInProgressEl = document.querySelector("#tasks-in-progress");
 var tasksCompletedEl = document.querySelector("#tasks-completed");
 var pageContentEl = document.querySelector("#page-content");
-
-// create array to hold tasks for saving
 var tasks = [];
 
 var taskFormHandler = function (event) {
@@ -252,22 +249,17 @@ var saveTasks = function() {
 };
 
 var loadTasks = function() {
-  var savedTasks = localStorage.getItem("tasks");
-  // if there are no tasks, set tasks to an empty array and return out of the function
-  if (!savedTasks) {
-    return false;
-  }
-  console.log("Saved tasks found!");
-  // else, load up saved tasks
+// Gets task items from localStorage.
+var savedTasks = localStorage.getItem("tasks");
+console.log();
 
-  // parse into array of objects
-  savedTasks = JSON.parse(savedTasks);
 
-  // loop through savedTasks array
-  for (var i = 0; i < savedTasks.length; i++) {
-    // pass each task object into the `createTaskEl()` function
-    createTaskEl(savedTasks[i]);
-  }
+// Converts tasks from the string format back into an array of objects.
+
+// Iterates through a tasks array and creates task elements on the page from it.
+
+
+loadTasks();
 };
 
 // Create a new task
